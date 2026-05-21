@@ -1,0 +1,6 @@
+# Keep GitHub language stats focused on the on-chain Anchor/Rust program.
+# This does not hide the frontend code; it only changes Linguist classification.
+app/** linguist-vendored
+app/dist/** linguist-generated
+app/package-lock.json linguist-generated
+package-lock.json linguist-generated
