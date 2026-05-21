@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ./app
+    ports:
+      - "4173:4173"
+    environment:
+      - PORT=4173
+    restart: unless-stopped

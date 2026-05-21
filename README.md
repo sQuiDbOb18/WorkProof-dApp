@@ -110,6 +110,30 @@ npm run app:dev
 
 By default the app points to `http://127.0.0.1:8899`. You can override it with `VITE_RPC_URL`.
 
+### Run the frontend with Docker
+
+Build the frontend container from the `app` folder:
+
+```bash
+docker build -t freelancer-escrow-app ./app
+```
+
+Run it locally:
+
+```bash
+docker run --rm -p 4173:4173 freelancer-escrow-app
+```
+
+Then open `http://localhost:4173` in your browser.
+
+Alternatively, use Docker Compose from the repository root:
+
+```bash
+docker compose up --build
+```
+
+This container serves the built React app. It does not start a Solana validator or deploy the on-chain program; for full Anchor development, continue using `solana-test-validator`, `anchor build`, and `anchor deploy`.
+
 ## Suggested demo flow
 
 1. Start `solana-test-validator`.
