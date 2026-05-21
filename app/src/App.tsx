@@ -35,7 +35,7 @@ function App() {
   const [selectedEscrow, setSelectedEscrow] = useState("");
   const [escrows, setEscrows] = useState<EscrowAccount[]>([]);
   const [statusMessage, setStatusMessage] = useState(
-    "Connect a wallet to manage escrows."
+    "Connect a wallet to create milestones, review submissions, and release payment."
   );
   const [loading, setLoading] = useState(false);
 
@@ -202,12 +202,12 @@ function App() {
     <main className="page-shell">
       <section className="hero-card">
         <div>
-          <p className="eyebrow">Solana + Anchor Demo</p>
+          <p className="eyebrow">Solana Freelance Payments</p>
           <h1>Freelancer Escrow dApp</h1>
           <p className="hero-copy">
-            A client funds an escrow in SOL, the freelancer submits proof of
-            work as text or a link, and the client either approves payment or
-            disputes the delivery.
+            Secure freelance payouts with on-chain escrow. Fund a job in SOL,
+            collect the freelancer&apos;s delivery link or written handoff, then
+            approve the release or raise a dispute from one shared workflow.
           </p>
         </div>
         <WalletMultiButton />
